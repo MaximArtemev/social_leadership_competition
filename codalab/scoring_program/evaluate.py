@@ -35,9 +35,9 @@ else:
         sys.exit()
 
     precision_at_k = np.mean(abs(reference['is_leader'] - prediction['is_leader']))/len(reference)
-    metric_2 = np.zeros(len(prediction))
-    metric_3 = np.zeros(len(prediction))
-    metric_4 = np.zeros(len(prediction))
+    metric_2 = 0
+    metric_3 = 0
+    metric_4 = 0
     
     score = precision_at_k + metric_2 + metric_3 + metric_4
    

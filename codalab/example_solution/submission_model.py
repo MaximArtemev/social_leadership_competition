@@ -17,7 +17,7 @@ class Model:
         x = test_data["uid"]
         pred = pd.DataFrame({
             "uid": x,
-            "is_leader": np.zeros(size=len(x)),
+            "is_leader": np.zeros(len(x)),
         })
 
         return pred
