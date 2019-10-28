@@ -1,6 +1,6 @@
-title: JUNO. Energy and Vertex Reconstruction
+title: Social Leadership Role Identification
 description: Test competition
-start_date: 2019-02-10 00:00:00+00:00
+start_date: 2019-11-10 00:00:00+00:00
 end_date: null
 competition_docker_image: ''
 has_registration: true
@@ -22,13 +22,13 @@ phases:
     ingestion_program: ingestion_program.zip
     input_data: data_train.zip
     is_scoring_only: false
-    label: Reconstruction without Dark Noise
+    label: Phase 1
     max_submissions: 999
     max_submissions_per_day: 5
     phasenumber: 1
     reference_data: data_validation.zip
     scoring_program: scoring_program.zip
-    start_date: 2018-02-10 00:00:00+00:00
+    start_date: 2019-11-10 00:00:00+00:00
     starting_kit: example_solution.zip
   1:
     auto_migration: false
@@ -37,13 +37,13 @@ phases:
     ingestion_program: ingestion_program.zip
     input_data: data_train.zip
     is_scoring_only: false
-    label: Reconstruction without Dark Noise
+    label: Phase 2
     max_submissions: 999
     max_submissions_per_day: 5
     phasenumber: 2
     reference_data: data_validation.zip
     scoring_program: scoring_program.zip
-    start_date: 2018-03-01 00:00:00+00:00
+    start_date: 2019-12-01 00:00:00+00:00
     starting_kit: example_solution.zip
   2:
     auto_migration: false
@@ -52,13 +52,13 @@ phases:
     ingestion_program: ingestion_program.zip
     input_data: data_train.zip
     is_scoring_only: false
-    label: Reconstruction without Dark Noise
+    label: Phase 3
     max_submissions: 999
     max_submissions_per_day: 5
     phasenumber: 3
     reference_data: data_validation.zip
     scoring_program: scoring_program.zip
-    start_date: 2018-04-01 00:00:00+00:00
+    start_date: 2020-04-01 00:00:00+00:00
     starting_kit: example_solution.zip
   3:
     auto_migration: false
@@ -67,13 +67,13 @@ phases:
     ingestion_program: ingestion_program.zip
     input_data: data_train.zip
     is_scoring_only: false
-    label: Reconstruction without Dark Noise
+    label: Phase 4
     max_submissions: 999
     max_submissions_per_day: 5
     phasenumber: 4
     reference_data: data_validation.zip
     scoring_program: scoring_program.zip
-    start_date: 2018-05-01 00:00:00+00:00
+    start_date: 2020-05-01 00:00:00+00:00
     starting_kit: example_solution.zip
   4:
     auto_migration: false
@@ -82,118 +82,13 @@ phases:
     ingestion_program: ingestion_program.zip
     input_data: data_train.zip
     is_scoring_only: false
-    label: Reconstruction without Dark Noise
+    label: Phase 5
     max_submissions: 999
     max_submissions_per_day: 5
     phasenumber: 5
     reference_data: data_validation.zip
     scoring_program: scoring_program.zip
-    start_date: 2018-05-01 00:00:00+00:00
-    starting_kit: example_solution.zip
-  5:
-    auto_migration: false
-    color: white
-    description: ''
-    ingestion_program: ingestion_program.zip
-    input_data: data_train.zip
-    is_scoring_only: false
-    label: Reconstruction without Dark Noise
-    max_submissions: 999
-    max_submissions_per_day: 5
-    phasenumber: 6
-    reference_data: data_validation.zip
-    scoring_program: scoring_program.zip
-    start_date: 2018-05-01 00:00:00+00:00
-    starting_kit: example_solution.zip
-  6:
-    auto_migration: false
-    color: white
-    description: ''
-    ingestion_program: ingestion_program.zip
-    input_data: data_train.zip
-    is_scoring_only: false
-    label: Reconstruction without Dark Noise
-    max_submissions: 999
-    max_submissions_per_day: 5
-    phasenumber: 7
-    reference_data: data_validation.zip
-    scoring_program: scoring_program.zip
-    start_date: 2018-05-01 00:00:00+00:00
-    starting_kit: example_solution.zip
-  7:
-    auto_migration: false
-    color: white
-    description: ''
-    ingestion_program: ingestion_program.zip
-    input_data: data_train.zip
-    is_scoring_only: false
-    label: Reconstruction without Dark Noise
-    max_submissions: 999
-    max_submissions_per_day: 5
-    phasenumber: 8
-    reference_data: data_validation.zip
-    scoring_program: scoring_program.zip
-    start_date: 2018-05-01 00:00:00+00:00
-    starting_kit: example_solution.zip
-  8:
-    auto_migration: false
-    color: white
-    description: ''
-    ingestion_program: ingestion_program.zip
-    input_data: data_train.zip
-    is_scoring_only: false
-    label: Reconstruction without Dark Noise
-    max_submissions: 999
-    max_submissions_per_day: 5
-    phasenumber: 9
-    reference_data: data_validation.zip
-    scoring_program: scoring_program.zip
-    start_date: 2018-05-01 00:00:00+00:00
-    starting_kit: example_solution.zip
-  9:
-    auto_migration: false
-    color: white
-    description: ''
-    ingestion_program: ingestion_program.zip
-    input_data: data_train.zip
-    is_scoring_only: false
-    label: Reconstruction without Dark Noise
-    max_submissions: 999
-    max_submissions_per_day: 5
-    phasenumber: 10
-    reference_data: data_validation.zip
-    scoring_program: scoring_program.zip
-    start_date: 2018-05-01 00:00:00+00:00
-    starting_kit: example_solution.zip
-  10:
-    auto_migration: false
-    color: white
-    description: ''
-    ingestion_program: ingestion_program.zip
-    input_data: data_train.zip
-    is_scoring_only: false
-    label: Reconstruction without Dark Noise
-    max_submissions: 999
-    max_submissions_per_day: 5
-    phasenumber: 11
-    reference_data: data_validation.zip
-    scoring_program: scoring_program.zip
-    start_date: 2018-05-01 00:00:00+00:00
-    starting_kit: example_solution.zip
-  11:
-    auto_migration: false
-    color: white
-    description: ''
-    ingestion_program: ingestion_program.zip
-    input_data: data_train.zip
-    is_scoring_only: false
-    label: Reconstruction without Dark Noise
-    max_submissions: 999
-    max_submissions_per_day: 5
-    phasenumber: 12
-    reference_data: data_validation.zip
-    scoring_program: scoring_program.zip
-    start_date: 2018-05-01 00:00:00+00:00
+    start_date: 2020-05-01 00:00:00+00:00
     starting_kit: example_solution.zip
 leaderboard:
   columns:
@@ -204,16 +99,30 @@ leaderboard:
         rank: 1
       rank: 1
       sort: asc
-    E:
-      label: E
+    Precision_at_K:
+      label: Precision_at_K
       leaderboard: &id002
         label: Results
         rank: 1
       rank: 1
       sort: asc
-    R:
-      label: R
+    Metric_2:
+      label: Metric_2
       leaderboard: &id003
+        label: Results
+        rank: 1
+      rank: 1
+      sort: asc
+    Metric_3:
+      label: Metric_3
+      leaderboard: &id004
+        label: Results
+        rank: 1
+      rank: 1
+      sort: asc
+    Metric_4:
+      label: Metric_4
+      leaderboard: &id005
         label: Results
         rank: 1
       rank: 1
