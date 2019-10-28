@@ -5,14 +5,13 @@ import numpy as np
 import pandas as pd
 
 
-
 input_dir = sys.argv[1]
 output_dir = sys.argv[2]
 
 submit_dir = os.path.join(input_dir, 'res')
 reference_dir = os.path.join(input_dir, 'ref')
 
-reference_file = os.path.join(reference_dir, 'test/test_true_info.csv')
+reference_file = os.path.join(reference_dir, 'test_data.csv')
 files = glob.glob(submit_dir + "/*.csv")
 prediction_file = files[0] 
 
@@ -24,32 +23,42 @@ else:
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    reference  = pd.read_csv(reference_file)
+    reference = pd.read_csv(reference_file)
     prediction = pd.read_csv(prediction_file)
 
-    reference  = reference.sort_values('evtID')
-    prediction = prediction.sort_values('evtID')
+    reference = reference.sort_values('uid')
+    prediction = prediction.sort_values('uid')
 
-    if not np.array_equal(reference['evtID'], prediction['evtID']):
+    if not np.array_equal(reference['uid'], prediction['uid']):
         print("Invalid column EvtID\n")
         sys.stderr.write("Invalid column EvtID\n")
         sys.exit()
-     
-    E_diff  = np.mean((reference['E'] - prediction['E']) ** 2)
-    R_diff = np.mean((reference['R'] - prediction['R']) ** 2)
-    score = R_diff / 100000 + E_diff * 100
+
+    precision_at_k = np.mean(abs(reference['is_leader'] - prediction['is_leader']))/len(reference)
+    metric_2 = np.zeros(len(prediction))
+    metric_3 = np.zeros(len(prediction))
+    metric_4 = np.zeros(len(prediction))
+    
+    score = precision_at_k + metric_2 + metric_3 + metric_4
    
     output_filename = os.path.join(output_dir, 'scores.txt')
 
     print("Total: {} \n".format(score))
-    print("E: {} \n".format(E_diff))
-    print("R: {} \n".format(R_diff))
+    print("Precision_at_K: {} \n".format(precision_at_k))
+    print("Metric_2: {} \n".format(metric_2))
+    print("Metric_3: {} \n".format(metric_3))
+    print("Metric_4: {} \n".format(metric_4))
 
     with open(output_filename, 'w') as output_file:
         output_file.write("Total: {}".format(score))
         output_file.write("\n")
-        output_file.write("E: {}".format(E_diff))
+        output_file.write("Precision_at_K: {}".format(precision_at_k ))
         output_file.write("\n")
-        output_file.write("R: {}".format(R_diff))
+        output_file.write("Metric_2: {}".format(metric_2))
+        output_file.write("\n")
+        output_file.write("Metric_3: {}".format(metric_3))
+        output_file.write("\n")
+        output_file.write("Metric_4: {}".format(metric_4))
+        output_file.write("\n")
 
 
