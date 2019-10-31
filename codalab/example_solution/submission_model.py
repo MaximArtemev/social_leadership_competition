@@ -4,7 +4,7 @@ import sys
 
 
 class Model:
-    def run(self, train_data, test_data):
+    def run(self, train_users, posts, test_users):
 
         """
         train_data - train data
@@ -14,10 +14,10 @@ class Model:
  
         """
 
-        x = test_data["uid"]
+        x = test_users["uid"]
         pred = pd.DataFrame({
             "uid": x,
-            "is_leader": np.zeros(len(x)),
+            "is_leader": np.ones(len(x)),
         })
 
         return pred
