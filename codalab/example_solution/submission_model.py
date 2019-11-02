@@ -4,17 +4,13 @@ import sys
 
 
 class Model:
-    def run(self, train_users, posts, test_users):
+    def run(self, data):
 
         """
-        train_data - train data
-        test_data - test data
-
-        Method returns dataframe with predictions.
- 
+        data: dict, {name: pd.DataFrame}
         """
 
-        x = test_users["uid"]
+        x = data['users_test']["uid"]
         pred = pd.DataFrame({
             "uid": x,
             "is_leader": np.ones(len(x)),

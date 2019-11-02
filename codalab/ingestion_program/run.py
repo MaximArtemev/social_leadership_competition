@@ -3,32 +3,28 @@ import glob
 import numpy as np
 import pandas as pd
 
-
+# path arguments
 ingestion_program = sys.argv[1] 
 train_data = sys.argv[2] 
 output_dir = sys.argv[3] 
 input_dir = sys.argv[4] 
-#shared_directory = sys.argv[5]
 submission_program = sys.argv[5] 
 
+# read the data however you like
+csv_files = glob.glob(train_data + '/*.csv')
+data = {name: pd.read_csv(os.path.join(train_data, name) for name in csv_files)}
 
-input_train_data = os.path.join(train_data, "train_users.csv")
-input_posts = os.path.join(train_data, "posts.csv")
-input_test_data = os.path.join(input_dir, "test_users.csv")
 
-
-test_data = pd.read_csv(input_test_data)
-
-train_data = pd.read_csv(input_train_data)
-posts = pd.read_csv(input_posts)
-
+# our file with the solution
 sys.path.append(submission_program)
-
 import submission_model
 
 model = submission_model.Model()
 
-pred = model.run(train_data, posts, test_data)
+# you can rewrite your model interface
 
-answer_path = os.path.join(output_dir, "pred.csv")
+pred = model.run(data)
+
+# write your prediction to the output_dir
+answer_path = os.path.join(output_dir, "prediction.csv")
 pred.to_csv(answer_path, index=False)
