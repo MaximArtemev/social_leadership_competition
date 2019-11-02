@@ -1,5 +1,6 @@
 # A guide to the coopetition stuff
 
+
 Все файлы типа example_solution, ingestion, etc идут вместе с "управляющими" командами metadata, которые указывают как именно будут запущены эти файлы
 
 ### Codalab forder.
