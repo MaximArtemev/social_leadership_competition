@@ -24,26 +24,11 @@ phases:
     is_scoring_only: false
     label: Phase 1
     max_submissions: 999
-    max_submissions_per_day: 5
+    max_submissions_per_day: 100
     phasenumber: 1
-    reference_data: data_validation.zip
+    reference_data: data_reference.zip
     scoring_program: scoring_program.zip
-    start_date: 2019-11-10 00:00:00+00:00
-    starting_kit: example_solution.zip
-  1:
-    auto_migration: false
-    color: white
-    description: ''
-    ingestion_program: ingestion_program.zip
-    input_data: data_train.zip
-    is_scoring_only: false
-    label: Phase 2
-    max_submissions: 999
-    max_submissions_per_day: 5
-    phasenumber: 2
-    reference_data: data_validation.zip
-    scoring_program: scoring_program.zip
-    start_date: 2019-12-01 00:00:00+00:00
+    start_date: 2019-11-1 00:00:00+00:00
     starting_kit: example_solution.zip
 leaderboard:
   columns:

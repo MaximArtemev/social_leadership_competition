@@ -12,7 +12,7 @@ submission_program = sys.argv[5]
 
 # read the data however you like
 csv_files = glob.glob(train_data + '/*.csv')
-data = {name: pd.read_csv(os.path.join(train_data, name)) for name in csv_files}
+data = {name.split('/')[-1]: pd.read_csv(os.path.join(name)) for name in csv_files}
 
 
 # our file with the solution

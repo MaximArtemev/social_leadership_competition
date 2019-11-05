@@ -12,8 +12,8 @@ submit_dir = os.path.join(input_dir, 'res')
 reference_dir = os.path.join(input_dir, 'ref')
 
 files = glob.glob(reference_dir + "/*.csv")
-reference_file = files[0]
-# os.path.join(reference_dir, 'test_data.csv')
+print(files)
+reference_file = files[0] #os.path.join(reference_dir, 'test_data.csv')
 files = glob.glob(submit_dir + "/*.csv")
 prediction_file = files[0] 
 
